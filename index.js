@@ -8,6 +8,10 @@ app.listen(port, () => {
 	console.log(`http://localhost:${port}`);
 });
 
+app.get('/', (req, res) => {
+	res.send('ExpressRouting');
+})
+
 app.get('/:param', async (req, res) => {
     console.log(req.params.param);
 });
